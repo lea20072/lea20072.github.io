@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trainings-Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #timer {
+      font-size: 48px;
+      margin: 20px;
+    }
+    button {
+      font-size: 20px;
+      margin: 10px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Trainings-Timer</h1>
+<div id="timer">00:00</div>
+<button onclick="startTimer()">Start</button>
+<button onclick="resetTimer()">Reset</button>
+
+<script>
+  let seconds = 0;
+  let interval = null;
+
+  function updateDisplay() {
+    let mins = Math.floor(seconds / 60);
+    let secs = seconds % 60;
+    document.getElementById('timer').textContent =
+      (mins < 10 ? '0' + mins : mins) + ':' +
+      (secs < 10 ? '0' + secs : secs);
+  }
+
+  function startTimer() {
+    if (interval) return;
+    interval = setInterval(() => {
+      seconds++;
+      updateDisplay();
+    }, 1000);
+  }
+
+  function resetTimer() {
+    clearInterval(interval);
+    interval = null;
+    seconds = 0;
+    updateDisplay();
+  }
+
+  updateDisplay();
+</script>
+
+</body>
+</html>

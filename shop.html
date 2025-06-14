@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dropshipping Fitness Produkte – Widerstandsbänder, Handschuhe, Flaschen & mehr. Jetzt online bestellen bei FitGear.">
+  <meta name="keywords" content="Fitness, Shop, Dropshipping, Gym, Produkte, Sport">
+  <meta name="author" content="FitGear">
+  <title>FitGear Shop</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+    header, footer { background-color: #222; color: white; text-align: center; padding: 20px; }
+    .container { max-width: 1000px; margin: auto; padding: 20px; }
+    .products { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; }
+    .product {
+      background: white; padding: 15px; border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1); width: 300px; text-align: center;
+    }
+    .product img { width: 100%; height: 200px; object-fit: contain; }
+    .price { color: green; font-weight: bold; }
+    .btn { background: #28a745; color: white; padding: 10px 15px; border: none;
+      border-radius: 5px; cursor: pointer; margin-top: 10px; }
+    .btn:hover { background: #218838; }
+    #cart { background: #fff; padding: 20px; margin-top: 30px;
+      border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    input, textarea { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+    .stock { font-size: 0.9em; color: #888; margin-top: 5px; }
+    .paypal-button { margin-top: 10px; }
+  </style>
+  <!-- Google Analytics Placeholder -->
+  <script>
+    // Google Analytics Integration (füge hier deine eigene Tracking-ID ein)
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);}
+    // gtag('js', new Date());
+    // gtag('config', 'G-XXXXXXX');
+  </script>
+</head>
+<body>
+<header>
+  <h1>FitGear - Dein Fitness Online-Shop</h1>
+</header>
+
+<div class="container">
+  <h2>Produkte</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://ae01.alicdn.com/kf/H8444a168158b4f9cb08d6e2210f41836t.jpg" />
+      <h3>Resistance Band</h3>
+      <p class="price">9.99 €</p>
+      <p class="stock">Auf Lager: 12 Stück</p>
+      <button class="btn" onclick="addToCart('Resistance Band', 9.99)">In den Warenkorb</button>
+    </div>
+    <div class="product">
+      <img src="https://ae01.alicdn.com/kf/H6b46d45c16b04858a155e63116352fc7q.jpg" />
+      <h3>Sporthandschuhe</h3>
+      <p class="price">14.99 €</p>
+      <p class="stock">Auf Lager: 8 Stück</p>
+      <button class="btn" onclick="addToCart('Sporthandschuhe', 14.99)">In den Warenkorb</button>
+    </div>
+    <div class="product">
+      <img src="https://ae01.alicdn.com/kf/Hdb8fbc4e00594340b8ad504278f47100p.jpg" />
+      <h3>Wasserflasche</h3>
+      <p class="price">12.49 €</p>
+      <p class="stock">Auf Lager: 15 Stück</p>
+      <button class="btn" onclick="addToCart('Wasserflasche', 12.49)">In den Warenkorb</button>
+    </div>
+  </div>
+
+  <div id="cart">
+    <h2>Warenkorb</h2>
+    <div id="cart-items"></div>
+    <p><strong>Gesamt: <span id="total">0.00</span> €</strong></p>
+
+    <h3>Bestellung absenden</h3>
+    <form onsubmit="return submitOrder()">
+      <input type="text" id="name" placeholder="Dein Name" required />
+      <input type="email" id="email" placeholder="E-Mail" required />
+      <textarea id="adresse" placeholder="Lieferadresse" required></textarea>
+      <button type="submit" class="btn">Per E-Mail bestellen</button>
+    </form>
+
+    <h4>Direkt kaufen mit PayPal:</h4>
+    <div class="paypal-button">
+      <a href="https://www.paypal.com" target="_blank">
+        <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal" width="120">
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;">
+    <h3>🎁 E-Mail für Angebote:</h3>
+    <input type="email" placeholder="Deine E-Mail" />
+    <button class="btn">Eintragen</button>
+  </div>
+</div>
+
+<footer>
+  © 2025 FitGear – Powered by GitHub Pages
+</footer>
+
+<script>
+  let cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    renderCart();
+  }
+
+  function renderCart() {
+    let container = document.getElementById("cart-items");
+    let total = 0;
+    container.innerHTML = "";
+    cart.forEach((item) => {
+      container.innerHTML += `
+        <div class="cart-item">
+          <span>${item.name}</span>
+          <span>${item.price.toFixed(2)} €</span>
+        </div>`;
+      total += item.price;
+    });
+    document.getElementById("total").textContent = total.toFixed(2);
+  }
+
+  function submitOrder() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let adresse = document.getElementById("adresse").value;
+    let orderDetails = cart.map(p => `${p.name} - ${p.price.toFixed(2)} €`).join("%0A");
+
+    let mailtoLink = `mailto:${email}?subject=Bestellung von ${name}&body=Produkte:%0A${orderDetails}%0A%0AAdresse:%0A${adresse}`;
+    window.location.href = mailtoLink;
+    return false;
+  }
+</script>
+</body>
+</html>
