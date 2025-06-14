@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>FitGear Shop</title>
+  <style>
+    body { font-family: Arial; background: #f2f2f2; color: #111; padding: 20px; }
+    .product { background: white; padding: 15px; border-radius: 8px; margin: 10px 0; }
+    .dark-mode { background: #121212; color: #eee; }
+    .dark-mode .product { background: #1e1e1e; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <button onclick="toggleDarkMode()">🌙/☀️ Darkmode</button>
+  <h1>🛍️ FitGear Produkte</h1>
+  <div class="product" data-price="49.99">Gaming Maus – 49.99 € <button onclick="addToCart('Gaming Maus', 49.99)">Jetzt kaufen</button></div>
+  <div class="product" data-price="89.99">JBL Box – 89.99 € <button onclick="addToCart('JBL Box', 89.99)">Jetzt kaufen</button></div>
+  <div class="product" data-price="29.99">Handyhalterung Auto – 29.99 € <button onclick="addToCart('Handyhalterung Auto', 29.99)">Jetzt kaufen</button></div>
+  <h3>🧺 Warenkorb:</h3>
+  <ul id="cart-items"></ul>
+  <p><strong>Gesamt:</strong> <span id="cart-total">0.00 €</span></p>
+  <a href="checkout.html">➡️ Zur Kasse</a>
+
+  <script>
+    function addToCart(name, price) {
+      const li = document.createElement('li');
+      li.setAttribute("data-price", price.toFixed(2));
+      li.innerHTML = name + " – " + price.toFixed(2) + " € <button onclick='removeCartItem(this.parentElement)'>Entfernen</button>";
+      document.getElementById("cart-items").appendChild(li);
+      updateTotal();
+    }
+
+    function removeCartItem(el) {
+      el.remove();
+      updateTotal();
+    }
+
+    function updateTotal() {
+      let total = 0;
+      document.querySelectorAll("#cart-items li").forEach(li => {
+        total += parseFloat(li.getAttribute("data-price"));
+      });
+      document.getElementById("cart-total").textContent = total.toFixed(2) + " €";
+      localStorage.setItem("cart-items", document.getElementById("cart-items").innerHTML);
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem("darkMode") === "true") document.body.classList.add("dark-mode");
+      if (localStorage.getItem("cart-items")) {
+        document.getElementById("cart-items").innerHTML = localStorage.getItem("cart-items");
+        updateTotal();
+      }
+    };
+  </script>
+</body>
+</html>
