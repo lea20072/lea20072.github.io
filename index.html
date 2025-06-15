@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGadgets – Dein Technik-Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FitGadgets</h1>
+        <input type="text" id="searchBar" onkeyup="liveSearch()" placeholder="Suche nach Produkten...">
+        <div class="cart-icon" onclick="alert('Warenkorb geöffnet (Demo)')">🛒 (<span id="cartCount">0</span>)</div>
+    </header>
+
+    <div class="filters">
+        <label>Preis:
+            <select id="priceFilter" onchange="filterProducts()">
+                <option value="all">Alle</option>
+                <option value="under10">Unter €10</option>
+                <option value="under20">Unter €20</option>
+                <option value="over20">Über €20</option>
+            </select>
+        </label>
+        <label>Bewertung:
+            <select id="ratingFilter" onchange="filterProducts()">
+                <option value="all">Alle</option>
+                <option value="4">★4+</option>
+                <option value="5">★5</option>
+            </select>
+        </label>
+    </div>
+
+    <main>
+        <section class="category" id="handy">
+            <h2>Handy-Zubehör</h2>
+            <div class="product-grid">
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=Ladegerät" alt="USB-C Ladegerät">
+        <h3>USB-C Ladegerät</h3>
+        <p class="price">€6.99</p>
+        <p class="rating">★★★★☆</p>
+        <button onclick="addToCart('USB-C Ladegerät', 6.99)">Zum Warenkorb</button>
+    </div>
+    
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=Hülle" alt="Handyhülle iPhone">
+        <h3>Handyhülle iPhone</h3>
+        <p class="price">€3.49</p>
+        <p class="rating">★★★★★</p>
+        <button onclick="addToCart('Handyhülle iPhone', 3.49)">Zum Warenkorb</button>
+    </div>
+    
+            </div>
+        </section>
+
+        <section class="category" id="auto">
+            <h2>Auto-Gadgets</h2>
+            <div class="product-grid">
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=Halterung" alt="Auto Handyhalterung">
+        <h3>Auto Handyhalterung</h3>
+        <p class="price">€8.99</p>
+        <p class="rating">★★★★☆</p>
+        <button onclick="addToCart('Auto Handyhalterung', 8.99)">Zum Warenkorb</button>
+    </div>
+    
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=LED+Auto" alt="LED Innenbeleuchtung">
+        <h3>LED Innenbeleuchtung</h3>
+        <p class="price">€4.99</p>
+        <p class="rating">★★★★★</p>
+        <button onclick="addToCart('LED Innenbeleuchtung', 4.99)">Zum Warenkorb</button>
+    </div>
+    
+            </div>
+        </section>
+
+        <section class="category" id="gaming">
+            <h2>Gaming</h2>
+            <div class="product-grid">
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=Gaming+Maus" alt="RGB Gaming Maus">
+        <h3>RGB Gaming Maus</h3>
+        <p class="price">€9.99</p>
+        <p class="rating">★★★★☆</p>
+        <button onclick="addToCart('RGB Gaming Maus', 9.99)">Zum Warenkorb</button>
+    </div>
+    
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=Halter" alt="Controller-Halter">
+        <h3>Controller-Halter</h3>
+        <p class="price">€5.49</p>
+        <p class="rating">★★★★☆</p>
+        <button onclick="addToCart('Controller-Halter', 5.49)">Zum Warenkorb</button>
+    </div>
+    
+            </div>
+        </section>
+
+        <section class="category" id="sound">
+            <h2>Sound & Boxen</h2>
+            <div class="product-grid">
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=Bluetooth+Box" alt="Mini Bluetooth Box">
+        <h3>Mini Bluetooth Box</h3>
+        <p class="price">€7.99</p>
+        <p class="rating">★★★★★</p>
+        <button onclick="addToCart('Mini Bluetooth Box', 7.99)">Zum Warenkorb</button>
+    </div>
+    
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=AUX" alt="3.5mm AUX-Kabel">
+        <h3>3.5mm AUX-Kabel</h3>
+        <p class="price">€2.99</p>
+        <p class="rating">★★★★☆</p>
+        <button onclick="addToCart('3.5mm AUX-Kabel', 2.99)">Zum Warenkorb</button>
+    </div>
+    
+            </div>
+        </section>
+
+        <section class="category" id="led">
+            <h2>LEDs & Licht</h2>
+            <div class="product-grid">
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=LED+Strip" alt="LED Strip 5m">
+        <h3>LED Strip 5m</h3>
+        <p class="price">€6.49</p>
+        <p class="rating">★★★★☆</p>
+        <button onclick="addToCart('LED Strip 5m', 6.49)">Zum Warenkorb</button>
+    </div>
+    
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=Nachtlicht" alt="RGB Nachtlicht">
+        <h3>RGB Nachtlicht</h3>
+        <p class="price">€4.79</p>
+        <p class="rating">★★★★★</p>
+        <button onclick="addToCart('RGB Nachtlicht', 4.79)">Zum Warenkorb</button>
+    </div>
+    
+            </div>
+        </section>
+
+        <section class="category" id="tech">
+            <h2>Allgemeine Technik</h2>
+            <div class="product-grid">
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=USB+Hub" alt="USB-Hub 4 Ports">
+        <h3>USB-Hub 4 Ports</h3>
+        <p class="price">€5.99</p>
+        <p class="rating">★★★★☆</p>
+        <button onclick="addToCart('USB-Hub 4 Ports', 5.99)">Zum Warenkorb</button>
+    </div>
+    
+
+    <div class="product">
+        <img src="https://via.placeholder.com/200x150?text=Smartwatch" alt="Smartwatch günstig">
+        <h3>Smartwatch günstig</h3>
+        <p class="price">€12.99</p>
+        <p class="rating">★★★★☆</p>
+        <button onclick="addToCart('Smartwatch günstig', 12.99)">Zum Warenkorb</button>
+    </div>
+    
+            </div>
+        </section>
+    </main>
+
+    <section class="contact">
+        <h2>Kontakt & FAQ</h2>
+        <p><strong>Frage:</strong> Wie bestelle ich?<br><em>Antwort:</em> Klicke auf ein Produkt, um es dem Warenkorb hinzuzufügen.</p>
+        <p><strong>Frage:</strong> Woher kommen die Produkte?<br><em>Antwort:</em> Die Produkte werden direkt von Partnern wie AliExpress geliefert.</p>
+        <p><strong>Kontakt:</strong> support@fitgadgets.de</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
