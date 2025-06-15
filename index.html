@@ -1,0 +1,1531 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>FitGear Shop – Startseite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #fff;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      border-bottom: 2px solid #333;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #222;
+      padding: 10px 0;
+      font-size: 1em;
+    }
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .container {
+      padding: 20px;
+    }
+    .product {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .product img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .product-details {
+      flex-grow: 1;
+    }
+    .product-title {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+    .product-price {
+      color: #66cc66;
+      margin-top: 5px;
+    }
+    .btn {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .cart {
+      margin-top: 30px;
+      background: #1b1b1b;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>🛒 FitGear Mobile Shop</header>
+  <nav>
+    <a href="index.html">Shop</a>
+    <a href="checkout.html">Kasse</a>
+    <a href="faq.html">FAQ</a>
+    <a href="timer.html">Angebot</a>
+  </nav>
+
+  <div class="container"><h2 style='margin-top:30px'>Handy & Zubehör</h2>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Ladekabel" alt="Ladekabel" />
+      <div class="product-details">
+        <div class="product-title">Ladekabel</div>
+        <div class="product-price">15.14 €</div>
+        <button class="btn" onclick="addToCart('Ladekabel', 15.14)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Hülle+iPhone" alt="Hülle iPhone" />
+      <div class="product-details">
+        <div class="product-title">Hülle iPhone</div>
+        <div class="product-price">2.25 €</div>
+        <button class="btn" onclick="addToCart('Hülle iPhone', 2.25)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Powerbank" alt="Powerbank" />
+      <div class="product-details">
+        <div class="product-title">Powerbank</div>
+        <div class="product-price">106.41 €</div>
+        <button class="btn" onclick="addToCart('Powerbank', 106.41)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB-C+Adapte" alt="USB-C Adapter" />
+      <div class="product-details">
+        <div class="product-title">USB-C Adapter</div>
+        <div class="product-price">113.39 €</div>
+        <button class="btn" onclick="addToCart('USB-C Adapter', 113.39)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Kfz-Ladegerä" alt="Kfz-Ladegerät" />
+      <div class="product-details">
+        <div class="product-title">Kfz-Ladegerät</div>
+        <div class="product-price">6.27 €</div>
+        <button class="btn" onclick="addToCart('Kfz-Ladegerät', 6.27)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Displayschut" alt="Displayschutzfolie" />
+      <div class="product-details">
+        <div class="product-title">Displayschutzfolie</div>
+        <div class="product-price">106.38 €</div>
+        <button class="btn" onclick="addToCart('Displayschutzfolie', 106.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=MagSafe+Halt" alt="MagSafe Halterung" />
+      <div class="product-details">
+        <div class="product-title">MagSafe Halterung</div>
+        <div class="product-price">2.65 €</div>
+        <button class="btn" onclick="addToCart('MagSafe Halterung', 2.65)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Wireless+Cha" alt="Wireless Charger" />
+      <div class="product-details">
+        <div class="product-title">Wireless Charger</div>
+        <div class="product-price">100.75 €</div>
+        <button class="btn" onclick="addToCart('Wireless Charger', 100.75)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Bluetooth+He" alt="Bluetooth Headset" />
+      <div class="product-details">
+        <div class="product-title">Bluetooth Headset</div>
+        <div class="product-price">13.44 €</div>
+        <button class="btn" onclick="addToCart('Bluetooth Headset', 13.44)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=PopSocket" alt="PopSocket" />
+      <div class="product-details">
+        <div class="product-title">PopSocket</div>
+        <div class="product-price">4.61 €</div>
+        <button class="btn" onclick="addToCart('PopSocket', 4.61)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Selfie+Stick" alt="Selfie Stick" />
+      <div class="product-details">
+        <div class="product-title">Selfie Stick</div>
+        <div class="product-price">7.32 €</div>
+        <button class="btn" onclick="addToCart('Selfie Stick', 7.32)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Mini-Stativ" alt="Mini-Stativ" />
+      <div class="product-details">
+        <div class="product-title">Mini-Stativ</div>
+        <div class="product-price">19.64 €</div>
+        <button class="btn" onclick="addToCart('Mini-Stativ', 19.64)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Handyhülle+t" alt="Handyhülle transparent" />
+      <div class="product-details">
+        <div class="product-title">Handyhülle transparent</div>
+        <div class="product-price">46.08 €</div>
+        <button class="btn" onclick="addToCart('Handyhülle transparent', 46.08)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Tablet-Ständ" alt="Tablet-Ständer" />
+      <div class="product-details">
+        <div class="product-title">Tablet-Ständer</div>
+        <div class="product-price">21.60 €</div>
+        <button class="btn" onclick="addToCart('Tablet-Ständer', 21.60)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Reinigungstu" alt="Reinigungstuch" />
+      <div class="product-details">
+        <div class="product-title">Reinigungstuch</div>
+        <div class="product-price">47.70 €</div>
+        <button class="btn" onclick="addToCart('Reinigungstuch', 47.70)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Handy-Kühlpa" alt="Handy-Kühlpad" />
+      <div class="product-details">
+        <div class="product-title">Handy-Kühlpad</div>
+        <div class="product-price">64.13 €</div>
+        <button class="btn" onclick="addToCart('Handy-Kühlpad', 64.13)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gaming-Grip" alt="Gaming-Grip" />
+      <div class="product-details">
+        <div class="product-title">Gaming-Grip</div>
+        <div class="product-price">47.50 €</div>
+        <button class="btn" onclick="addToCart('Gaming-Grip', 47.50)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Lade-Dock" alt="Lade-Dock" />
+      <div class="product-details">
+        <div class="product-title">Lade-Dock</div>
+        <div class="product-price">5.62 €</div>
+        <button class="btn" onclick="addToCart('Lade-Dock', 5.62)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=iPad+Pencil+" alt="iPad Pencil Ersatz" />
+      <div class="product-details">
+        <div class="product-title">iPad Pencil Ersatz</div>
+        <div class="product-price">125.97 €</div>
+        <button class="btn" onclick="addToCart('iPad Pencil Ersatz', 125.97)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=CarPlay+Dong" alt="CarPlay Dongle" />
+      <div class="product-details">
+        <div class="product-title">CarPlay Dongle</div>
+        <div class="product-price">6.16 €</div>
+        <button class="btn" onclick="addToCart('CarPlay Dongle', 6.16)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Handy-Armban" alt="Handy-Armband" />
+      <div class="product-details">
+        <div class="product-title">Handy-Armband</div>
+        <div class="product-price">11.17 €</div>
+        <button class="btn" onclick="addToCart('Handy-Armband', 11.17)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Smartphone-H" alt="Smartphone-Halterung Fahrrad" />
+      <div class="product-details">
+        <div class="product-title">Smartphone-Halterung Fahrrad</div>
+        <div class="product-price">21.04 €</div>
+        <button class="btn" onclick="addToCart('Smartphone-Halterung Fahrrad', 21.04)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Anti-Rutsch-" alt="Anti-Rutsch-Pad" />
+      <div class="product-details">
+        <div class="product-title">Anti-Rutsch-Pad</div>
+        <div class="product-price">65.39 €</div>
+        <button class="btn" onclick="addToCart('Anti-Rutsch-Pad', 65.39)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=2-in-1+Kabel" alt="2-in-1 Kabel" />
+      <div class="product-details">
+        <div class="product-title">2-in-1 Kabel</div>
+        <div class="product-price">5.33 €</div>
+        <button class="btn" onclick="addToCart('2-in-1 Kabel', 5.33)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Multifunktio" alt="Multifunktions-Clip" />
+      <div class="product-details">
+        <div class="product-title">Multifunktions-Clip</div>
+        <div class="product-price">21.63 €</div>
+        <button class="btn" onclick="addToCart('Multifunktions-Clip', 21.63)">Jetzt kaufen</button>
+      </div>
+    </div>
+    <h2 style='margin-top:30px'>Auto Gadgets</h2>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Auto-Organiz" alt="Auto-Organizer" />
+      <div class="product-details">
+        <div class="product-title">Auto-Organizer</div>
+        <div class="product-price">141.16 €</div>
+        <button class="btn" onclick="addToCart('Auto-Organizer', 141.16)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB-Ladegerä" alt="USB-Ladegerät" />
+      <div class="product-details">
+        <div class="product-title">USB-Ladegerät</div>
+        <div class="product-price">142.38 €</div>
+        <button class="btn" onclick="addToCart('USB-Ladegerät', 142.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=LED+Innenrau" alt="LED Innenraum" />
+      <div class="product-details">
+        <div class="product-title">LED Innenraum</div>
+        <div class="product-price">5.32 €</div>
+        <button class="btn" onclick="addToCart('LED Innenraum', 5.32)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Reifen-Luftd" alt="Reifen-Luftdruckprüfer" />
+      <div class="product-details">
+        <div class="product-title">Reifen-Luftdruckprüfer</div>
+        <div class="product-price">22.35 €</div>
+        <button class="btn" onclick="addToCart('Reifen-Luftdruckprüfer', 22.35)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Auto-Luftrei" alt="Auto-Luftreiniger" />
+      <div class="product-details">
+        <div class="product-title">Auto-Luftreiniger</div>
+        <div class="product-price">83.50 €</div>
+        <button class="btn" onclick="addToCart('Auto-Luftreiniger', 83.50)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Kofferraumne" alt="Kofferraumnetz" />
+      <div class="product-details">
+        <div class="product-title">Kofferraumnetz</div>
+        <div class="product-price">79.12 €</div>
+        <button class="btn" onclick="addToCart('Kofferraumnetz', 79.12)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Parkhilfe" alt="Parkhilfe" />
+      <div class="product-details">
+        <div class="product-title">Parkhilfe</div>
+        <div class="product-price">50.73 €</div>
+        <button class="btn" onclick="addToCart('Parkhilfe', 50.73)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Bluetooth+FM" alt="Bluetooth FM-Transmitter" />
+      <div class="product-details">
+        <div class="product-title">Bluetooth FM-Transmitter</div>
+        <div class="product-price">27.90 €</div>
+        <button class="btn" onclick="addToCart('Bluetooth FM-Transmitter', 27.90)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Auto-Sitzhak" alt="Auto-Sitzhaken" />
+      <div class="product-details">
+        <div class="product-title">Auto-Sitzhaken</div>
+        <div class="product-price">41.39 €</div>
+        <button class="btn" onclick="addToCart('Auto-Sitzhaken', 41.39)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Dashcam" alt="Dashcam" />
+      <div class="product-details">
+        <div class="product-title">Dashcam</div>
+        <div class="product-price">41.16 €</div>
+        <button class="btn" onclick="addToCart('Dashcam', 41.16)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Sitzkissen" alt="Sitzkissen" />
+      <div class="product-details">
+        <div class="product-title">Sitzkissen</div>
+        <div class="product-price">85.79 €</div>
+        <button class="btn" onclick="addToCart('Sitzkissen', 85.79)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Getränkehalt" alt="Getränkehalter" />
+      <div class="product-details">
+        <div class="product-title">Getränkehalter</div>
+        <div class="product-price">82.60 €</div>
+        <button class="btn" onclick="addToCart('Getränkehalter', 82.60)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Scheibenabde" alt="Scheibenabdeckung" />
+      <div class="product-details">
+        <div class="product-title">Scheibenabdeckung</div>
+        <div class="product-price">8.73 €</div>
+        <button class="btn" onclick="addToCart('Scheibenabdeckung', 8.73)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Handyhalteru" alt="Handyhalterung" />
+      <div class="product-details">
+        <div class="product-title">Handyhalterung</div>
+        <div class="product-price">100.16 €</div>
+        <button class="btn" onclick="addToCart('Handyhalterung', 100.16)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Auto-Duftspe" alt="Auto-Duftspender" />
+      <div class="product-details">
+        <div class="product-title">Auto-Duftspender</div>
+        <div class="product-price">55.63 €</div>
+        <button class="btn" onclick="addToCart('Auto-Duftspender', 55.63)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Auto-Staubsa" alt="Auto-Staubsauger" />
+      <div class="product-details">
+        <div class="product-title">Auto-Staubsauger</div>
+        <div class="product-price">32.96 €</div>
+        <button class="btn" onclick="addToCart('Auto-Staubsauger', 32.96)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Schmutzmatte" alt="Schmutzmatte" />
+      <div class="product-details">
+        <div class="product-title">Schmutzmatte</div>
+        <div class="product-price">97.86 €</div>
+        <button class="btn" onclick="addToCart('Schmutzmatte', 97.86)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Notfallhamme" alt="Notfallhammer" />
+      <div class="product-details">
+        <div class="product-title">Notfallhammer</div>
+        <div class="product-price">7.07 €</div>
+        <button class="btn" onclick="addToCart('Notfallhammer', 7.07)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Ladekabel+Au" alt="Ladekabel Auto" />
+      <div class="product-details">
+        <div class="product-title">Ladekabel Auto</div>
+        <div class="product-price">6.74 €</div>
+        <button class="btn" onclick="addToCart('Ladekabel Auto', 6.74)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Tablet-Halte" alt="Tablet-Halter Kopfstütze" />
+      <div class="product-details">
+        <div class="product-title">Tablet-Halter Kopfstütze</div>
+        <div class="product-price">3.31 €</div>
+        <button class="btn" onclick="addToCart('Tablet-Halter Kopfstütze', 3.31)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Smart+Key+Co" alt="Smart Key Cover" />
+      <div class="product-details">
+        <div class="product-title">Smart Key Cover</div>
+        <div class="product-price">3.45 €</div>
+        <button class="btn" onclick="addToCart('Smart Key Cover', 3.45)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Luftbefeucht" alt="Luftbefeuchter Auto" />
+      <div class="product-details">
+        <div class="product-title">Luftbefeuchter Auto</div>
+        <div class="product-price">40.06 €</div>
+        <button class="btn" onclick="addToCart('Luftbefeuchter Auto', 40.06)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB-Stick+Mu" alt="USB-Stick Musik" />
+      <div class="product-details">
+        <div class="product-title">USB-Stick Musik</div>
+        <div class="product-price">50.92 €</div>
+        <button class="btn" onclick="addToCart('USB-Stick Musik', 50.92)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gurtpolster" alt="Gurtpolster" />
+      <div class="product-details">
+        <div class="product-title">Gurtpolster</div>
+        <div class="product-price">3.35 €</div>
+        <button class="btn" onclick="addToCart('Gurtpolster', 3.35)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=LED+Projekto" alt="LED Projektor Logo" />
+      <div class="product-details">
+        <div class="product-title">LED Projektor Logo</div>
+        <div class="product-price">5.51 €</div>
+        <button class="btn" onclick="addToCart('LED Projektor Logo', 5.51)">Jetzt kaufen</button>
+      </div>
+    </div>
+    <h2 style='margin-top:30px'>Sound & Boxen</h2>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=JBL+GO" alt="JBL GO" />
+      <div class="product-details">
+        <div class="product-title">JBL GO</div>
+        <div class="product-price">0.80 €</div>
+        <button class="btn" onclick="addToCart('JBL GO', 0.80)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Bose+SoundLi" alt="Bose SoundLink" />
+      <div class="product-details">
+        <div class="product-title">Bose SoundLink</div>
+        <div class="product-price">21.22 €</div>
+        <button class="btn" onclick="addToCart('Bose SoundLink', 21.22)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Anker+SoundC" alt="Anker SoundCore" />
+      <div class="product-details">
+        <div class="product-title">Anker SoundCore</div>
+        <div class="product-price">19.31 €</div>
+        <button class="btn" onclick="addToCart('Anker SoundCore', 19.31)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Marshall+Emb" alt="Marshall Emberton" />
+      <div class="product-details">
+        <div class="product-title">Marshall Emberton</div>
+        <div class="product-price">7.97 €</div>
+        <button class="btn" onclick="addToCart('Marshall Emberton', 7.97)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Sony+XB13" alt="Sony XB13" />
+      <div class="product-details">
+        <div class="product-title">Sony XB13</div>
+        <div class="product-price">61.38 €</div>
+        <button class="btn" onclick="addToCart('Sony XB13', 61.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Bluetooth+La" alt="Bluetooth Lautsprecher" />
+      <div class="product-details">
+        <div class="product-title">Bluetooth Lautsprecher</div>
+        <div class="product-price">92.38 €</div>
+        <button class="btn" onclick="addToCart('Bluetooth Lautsprecher', 92.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Mini-Speaker" alt="Mini-Speaker" />
+      <div class="product-details">
+        <div class="product-title">Mini-Speaker</div>
+        <div class="product-price">97.01 €</div>
+        <button class="btn" onclick="addToCart('Mini-Speaker', 97.01)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Smart+Speake" alt="Smart Speaker" />
+      <div class="product-details">
+        <div class="product-title">Smart Speaker</div>
+        <div class="product-price">105.71 €</div>
+        <button class="btn" onclick="addToCart('Smart Speaker', 105.71)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Lautsprecher" alt="Lautsprecher Halterung" />
+      <div class="product-details">
+        <div class="product-title">Lautsprecher Halterung</div>
+        <div class="product-price">93.20 €</div>
+        <button class="btn" onclick="addToCart('Lautsprecher Halterung', 93.20)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Wasserdichte" alt="Wasserdichter Speaker" />
+      <div class="product-details">
+        <div class="product-title">Wasserdichter Speaker</div>
+        <div class="product-price">9.96 €</div>
+        <button class="btn" onclick="addToCart('Wasserdichter Speaker', 9.96)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Tragbare+Box" alt="Tragbare Box" />
+      <div class="product-details">
+        <div class="product-title">Tragbare Box</div>
+        <div class="product-price">5.30 €</div>
+        <button class="btn" onclick="addToCart('Tragbare Box', 5.30)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Echo+Dot" alt="Echo Dot" />
+      <div class="product-details">
+        <div class="product-title">Echo Dot</div>
+        <div class="product-price">98.83 €</div>
+        <button class="btn" onclick="addToCart('Echo Dot', 98.83)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Lautsprecher" alt="Lautsprecher mit LED" />
+      <div class="product-details">
+        <div class="product-title">Lautsprecher mit LED</div>
+        <div class="product-price">88.11 €</div>
+        <button class="btn" onclick="addToCart('Lautsprecher mit LED', 88.11)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Subwoofer" alt="Subwoofer" />
+      <div class="product-details">
+        <div class="product-title">Subwoofer</div>
+        <div class="product-price">19.98 €</div>
+        <button class="btn" onclick="addToCart('Subwoofer', 19.98)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB+Speaker" alt="USB Speaker" />
+      <div class="product-details">
+        <div class="product-title">USB Speaker</div>
+        <div class="product-price">132.54 €</div>
+        <button class="btn" onclick="addToCart('USB Speaker', 132.54)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Soundbar" alt="Soundbar" />
+      <div class="product-details">
+        <div class="product-title">Soundbar</div>
+        <div class="product-price">18.21 €</div>
+        <button class="btn" onclick="addToCart('Soundbar', 18.21)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=PC+Lautsprec" alt="PC Lautsprecher" />
+      <div class="product-details">
+        <div class="product-title">PC Lautsprecher</div>
+        <div class="product-price">107.49 €</div>
+        <button class="btn" onclick="addToCart('PC Lautsprecher', 107.49)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Radio+mit+BT" alt="Radio mit BT" />
+      <div class="product-details">
+        <div class="product-title">Radio mit BT</div>
+        <div class="product-price">0.98 €</div>
+        <button class="btn" onclick="addToCart('Radio mit BT', 0.98)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Retro+Lautsp" alt="Retro Lautsprecher" />
+      <div class="product-details">
+        <div class="product-title">Retro Lautsprecher</div>
+        <div class="product-price">40.44 €</div>
+        <button class="btn" onclick="addToCart('Retro Lautsprecher', 40.44)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=NFC-Box" alt="NFC-Box" />
+      <div class="product-details">
+        <div class="product-title">NFC-Box</div>
+        <div class="product-price">35.79 €</div>
+        <button class="btn" onclick="addToCart('NFC-Box', 35.79)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Party-Lautsp" alt="Party-Lautsprecher" />
+      <div class="product-details">
+        <div class="product-title">Party-Lautsprecher</div>
+        <div class="product-price">6.12 €</div>
+        <button class="btn" onclick="addToCart('Party-Lautsprecher', 6.12)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Wireless+Cha" alt="Wireless Charging Speaker" />
+      <div class="product-details">
+        <div class="product-title">Wireless Charging Speaker</div>
+        <div class="product-price">19.36 €</div>
+        <button class="btn" onclick="addToCart('Wireless Charging Speaker', 19.36)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Karaoke+Laut" alt="Karaoke Lautsprecher" />
+      <div class="product-details">
+        <div class="product-title">Karaoke Lautsprecher</div>
+        <div class="product-price">8.77 €</div>
+        <button class="btn" onclick="addToCart('Karaoke Lautsprecher', 8.77)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Clip-Speaker" alt="Clip-Speaker" />
+      <div class="product-details">
+        <div class="product-title">Clip-Speaker</div>
+        <div class="product-price">23.12 €</div>
+        <button class="btn" onclick="addToCart('Clip-Speaker', 23.12)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Auto-Bluetoo" alt="Auto-Bluetooth Speaker" />
+      <div class="product-details">
+        <div class="product-title">Auto-Bluetooth Speaker</div>
+        <div class="product-price">1.52 €</div>
+        <button class="btn" onclick="addToCart('Auto-Bluetooth Speaker', 1.52)">Jetzt kaufen</button>
+      </div>
+    </div>
+    <h2 style='margin-top:30px'>LEDs & Technik</h2>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=LED+Strip+5m" alt="LED Strip 5m" />
+      <div class="product-details">
+        <div class="product-title">LED Strip 5m</div>
+        <div class="product-price">53.45 €</div>
+        <button class="btn" onclick="addToCart('LED Strip 5m', 53.45)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Bewegungssen" alt="Bewegungssensor Licht" />
+      <div class="product-details">
+        <div class="product-title">Bewegungssensor Licht</div>
+        <div class="product-price">5.38 €</div>
+        <button class="btn" onclick="addToCart('Bewegungssensor Licht', 5.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB+LED+Lamp" alt="USB LED Lampe" />
+      <div class="product-details">
+        <div class="product-title">USB LED Lampe</div>
+        <div class="product-price">21.27 €</div>
+        <button class="btn" onclick="addToCart('USB LED Lampe', 21.27)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=LED+Monitor+" alt="LED Monitor Light" />
+      <div class="product-details">
+        <div class="product-title">LED Monitor Light</div>
+        <div class="product-price">5.05 €</div>
+        <button class="btn" onclick="addToCart('LED Monitor Light', 5.05)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=RGB+Tischlam" alt="RGB Tischlampe" />
+      <div class="product-details">
+        <div class="product-title">RGB Tischlampe</div>
+        <div class="product-price">26.38 €</div>
+        <button class="btn" onclick="addToCart('RGB Tischlampe', 26.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=LED+Eckenlei" alt="LED Eckenleiste" />
+      <div class="product-details">
+        <div class="product-title">LED Eckenleiste</div>
+        <div class="product-price">7.35 €</div>
+        <button class="btn" onclick="addToCart('LED Eckenleiste', 7.35)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB+Nachtlic" alt="USB Nachtlicht" />
+      <div class="product-details">
+        <div class="product-title">USB Nachtlicht</div>
+        <div class="product-price">56.69 €</div>
+        <button class="btn" onclick="addToCart('USB Nachtlicht', 56.69)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Smart+Glühbi" alt="Smart Glühbirne" />
+      <div class="product-details">
+        <div class="product-title">Smart Glühbirne</div>
+        <div class="product-price">98.08 €</div>
+        <button class="btn" onclick="addToCart('Smart Glühbirne', 98.08)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=LED+Duschkop" alt="LED Duschkopf" />
+      <div class="product-details">
+        <div class="product-title">LED Duschkopf</div>
+        <div class="product-price">44.92 €</div>
+        <button class="btn" onclick="addToCart('LED Duschkopf', 44.92)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Licht+mit+Fe" alt="Licht mit Fernbedienung" />
+      <div class="product-details">
+        <div class="product-title">Licht mit Fernbedienung</div>
+        <div class="product-price">111.77 €</div>
+        <button class="btn" onclick="addToCart('Licht mit Fernbedienung', 111.77)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Sonnenaufgan" alt="Sonnenaufgangswecker" />
+      <div class="product-details">
+        <div class="product-title">Sonnenaufgangswecker</div>
+        <div class="product-price">22.00 €</div>
+        <button class="btn" onclick="addToCart('Sonnenaufgangswecker', 22.00)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Laserprojekt" alt="Laserprojektor" />
+      <div class="product-details">
+        <div class="product-title">Laserprojektor</div>
+        <div class="product-price">1.62 €</div>
+        <button class="btn" onclick="addToCart('Laserprojektor', 1.62)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Lichterkette" alt="Lichterkette" />
+      <div class="product-details">
+        <div class="product-title">Lichterkette</div>
+        <div class="product-price">9.80 €</div>
+        <button class="btn" onclick="addToCart('Lichterkette', 9.80)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Touchlampe" alt="Touchlampe" />
+      <div class="product-details">
+        <div class="product-title">Touchlampe</div>
+        <div class="product-price">4.76 €</div>
+        <button class="btn" onclick="addToCart('Touchlampe', 4.76)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Schreibtisch" alt="Schreibtisch-LED" />
+      <div class="product-details">
+        <div class="product-title">Schreibtisch-LED</div>
+        <div class="product-price">92.88 €</div>
+        <button class="btn" onclick="addToCart('Schreibtisch-LED', 92.88)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=LED+Ringlich" alt="LED Ringlicht" />
+      <div class="product-details">
+        <div class="product-title">LED Ringlicht</div>
+        <div class="product-price">8.85 €</div>
+        <button class="btn" onclick="addToCart('LED Ringlicht', 8.85)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gaming+LED+P" alt="Gaming LED Pads" />
+      <div class="product-details">
+        <div class="product-title">Gaming LED Pads</div>
+        <div class="product-price">81.79 €</div>
+        <button class="btn" onclick="addToCart('Gaming LED Pads', 81.79)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=WLAN+Steckdo" alt="WLAN Steckdose" />
+      <div class="product-details">
+        <div class="product-title">WLAN Steckdose</div>
+        <div class="product-price">146.60 €</div>
+        <button class="btn" onclick="addToCart('WLAN Steckdose', 146.60)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Timer+Plug" alt="Timer Plug" />
+      <div class="product-details">
+        <div class="product-title">Timer Plug</div>
+        <div class="product-price">2.35 €</div>
+        <button class="btn" onclick="addToCart('Timer Plug', 2.35)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Smart+Plug" alt="Smart Plug" />
+      <div class="product-details">
+        <div class="product-title">Smart Plug</div>
+        <div class="product-price">31.70 €</div>
+        <button class="btn" onclick="addToCart('Smart Plug', 31.70)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=LED+PC+Leist" alt="LED PC Leiste" />
+      <div class="product-details">
+        <div class="product-title">LED PC Leiste</div>
+        <div class="product-price">70.54 €</div>
+        <button class="btn" onclick="addToCart('LED PC Leiste', 70.54)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Stimmungslic" alt="Stimmungslicht" />
+      <div class="product-details">
+        <div class="product-title">Stimmungslicht</div>
+        <div class="product-price">50.02 €</div>
+        <button class="btn" onclick="addToCart('Stimmungslicht', 50.02)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Licht+Panel" alt="Licht Panel" />
+      <div class="product-details">
+        <div class="product-title">Licht Panel</div>
+        <div class="product-price">102.24 €</div>
+        <button class="btn" onclick="addToCart('Licht Panel', 102.24)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB+Lichtban" alt="USB Lichtband" />
+      <div class="product-details">
+        <div class="product-title">USB Lichtband</div>
+        <div class="product-price">35.84 €</div>
+        <button class="btn" onclick="addToCart('USB Lichtband', 35.84)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=RGB+Wanddeko" alt="RGB Wanddeko" />
+      <div class="product-details">
+        <div class="product-title">RGB Wanddeko</div>
+        <div class="product-price">67.18 €</div>
+        <button class="btn" onclick="addToCart('RGB Wanddeko', 67.18)">Jetzt kaufen</button>
+      </div>
+    </div>
+    <h2 style='margin-top:30px'>Tech Geräte</h2>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Mini-Beamer" alt="Mini-Beamer" />
+      <div class="product-details">
+        <div class="product-title">Mini-Beamer</div>
+        <div class="product-price">52.91 €</div>
+        <button class="btn" onclick="addToCart('Mini-Beamer', 52.91)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Smartwatch" alt="Smartwatch" />
+      <div class="product-details">
+        <div class="product-title">Smartwatch</div>
+        <div class="product-price">5.27 €</div>
+        <button class="btn" onclick="addToCart('Smartwatch', 5.27)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=TV+Stick" alt="TV Stick" />
+      <div class="product-details">
+        <div class="product-title">TV Stick</div>
+        <div class="product-price">17.22 €</div>
+        <button class="btn" onclick="addToCart('TV Stick', 17.22)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=WiFi+Repeate" alt="WiFi Repeater" />
+      <div class="product-details">
+        <div class="product-title">WiFi Repeater</div>
+        <div class="product-price">5.48 €</div>
+        <button class="btn" onclick="addToCart('WiFi Repeater', 5.48)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Mini-PC" alt="Mini-PC" />
+      <div class="product-details">
+        <div class="product-title">Mini-PC</div>
+        <div class="product-price">64.64 €</div>
+        <button class="btn" onclick="addToCart('Mini-PC', 64.64)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Action+Cam" alt="Action Cam" />
+      <div class="product-details">
+        <div class="product-title">Action Cam</div>
+        <div class="product-price">145.88 €</div>
+        <button class="btn" onclick="addToCart('Action Cam', 145.88)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Webcam+Full+" alt="Webcam Full HD" />
+      <div class="product-details">
+        <div class="product-title">Webcam Full HD</div>
+        <div class="product-price">79.39 €</div>
+        <button class="btn" onclick="addToCart('Webcam Full HD', 79.39)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Bluetooth+Ta" alt="Bluetooth Tastatur" />
+      <div class="product-details">
+        <div class="product-title">Bluetooth Tastatur</div>
+        <div class="product-price">113.92 €</div>
+        <button class="btn" onclick="addToCart('Bluetooth Tastatur', 113.92)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB-Hub" alt="USB-Hub" />
+      <div class="product-details">
+        <div class="product-title">USB-Hub</div>
+        <div class="product-price">100.38 €</div>
+        <button class="btn" onclick="addToCart('USB-Hub', 100.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=SSD+Festplat" alt="SSD Festplatte" />
+      <div class="product-details">
+        <div class="product-title">SSD Festplatte</div>
+        <div class="product-price">36.47 €</div>
+        <button class="btn" onclick="addToCart('SSD Festplatte', 36.47)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=VR+Brille" alt="VR Brille" />
+      <div class="product-details">
+        <div class="product-title">VR Brille</div>
+        <div class="product-price">136.34 €</div>
+        <button class="btn" onclick="addToCart('VR Brille', 136.34)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Digitale+Lup" alt="Digitale Lupe" />
+      <div class="product-details">
+        <div class="product-title">Digitale Lupe</div>
+        <div class="product-price">9.34 €</div>
+        <button class="btn" onclick="addToCart('Digitale Lupe', 9.34)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=GPS+Tracker" alt="GPS Tracker" />
+      <div class="product-details">
+        <div class="product-title">GPS Tracker</div>
+        <div class="product-price">31.43 €</div>
+        <button class="btn" onclick="addToCart('GPS Tracker', 31.43)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Kamera-Detek" alt="Kamera-Detektor" />
+      <div class="product-details">
+        <div class="product-title">Kamera-Detektor</div>
+        <div class="product-price">125.61 €</div>
+        <button class="btn" onclick="addToCart('Kamera-Detektor', 125.61)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=RFID-Scanner" alt="RFID-Scanner" />
+      <div class="product-details">
+        <div class="product-title">RFID-Scanner</div>
+        <div class="product-price">82.39 €</div>
+        <button class="btn" onclick="addToCart('RFID-Scanner', 82.39)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Mini-Drucker" alt="Mini-Drucker" />
+      <div class="product-details">
+        <div class="product-title">Mini-Drucker</div>
+        <div class="product-price">10.58 €</div>
+        <button class="btn" onclick="addToCart('Mini-Drucker', 10.58)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB+Mikrosko" alt="USB Mikroskop" />
+      <div class="product-details">
+        <div class="product-title">USB Mikroskop</div>
+        <div class="product-price">131.44 €</div>
+        <button class="btn" onclick="addToCart('USB Mikroskop', 131.44)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Fingerabdruc" alt="Fingerabdruck-Schloss" />
+      <div class="product-details">
+        <div class="product-title">Fingerabdruck-Schloss</div>
+        <div class="product-price">55.33 €</div>
+        <button class="btn" onclick="addToCart('Fingerabdruck-Schloss', 55.33)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=WiFi+Kamera" alt="WiFi Kamera" />
+      <div class="product-details">
+        <div class="product-title">WiFi Kamera</div>
+        <div class="product-price">2.51 €</div>
+        <button class="btn" onclick="addToCart('WiFi Kamera', 2.51)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Multimeter+D" alt="Multimeter Digital" />
+      <div class="product-details">
+        <div class="product-title">Multimeter Digital</div>
+        <div class="product-price">80.07 €</div>
+        <button class="btn" onclick="addToCart('Multimeter Digital', 80.07)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=E-Book+Reade" alt="E-Book Reader" />
+      <div class="product-details">
+        <div class="product-title">E-Book Reader</div>
+        <div class="product-price">9.65 €</div>
+        <button class="btn" onclick="addToCart('E-Book Reader', 9.65)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Luftreiniger" alt="Luftreiniger" />
+      <div class="product-details">
+        <div class="product-title">Luftreiniger</div>
+        <div class="product-price">1.29 €</div>
+        <button class="btn" onclick="addToCart('Luftreiniger', 1.29)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Kompakter+Ve" alt="Kompakter Ventilator" />
+      <div class="product-details">
+        <div class="product-title">Kompakter Ventilator</div>
+        <div class="product-price">9.64 €</div>
+        <button class="btn" onclick="addToCart('Kompakter Ventilator', 9.64)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Maus+mit+Dau" alt="Maus mit Daumenrad" />
+      <div class="product-details">
+        <div class="product-title">Maus mit Daumenrad</div>
+        <div class="product-price">2.59 €</div>
+        <button class="btn" onclick="addToCart('Maus mit Daumenrad', 2.59)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB+Heizkiss" alt="USB Heizkissen" />
+      <div class="product-details">
+        <div class="product-title">USB Heizkissen</div>
+        <div class="product-price">114.38 €</div>
+        <button class="btn" onclick="addToCart('USB Heizkissen', 114.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    <h2 style='margin-top:30px'>Gaming</h2>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gaming+Maus" alt="Gaming Maus" />
+      <div class="product-details">
+        <div class="product-title">Gaming Maus</div>
+        <div class="product-price">50.65 €</div>
+        <button class="btn" onclick="addToCart('Gaming Maus', 50.65)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=RGB+Mauspad" alt="RGB Mauspad" />
+      <div class="product-details">
+        <div class="product-title">RGB Mauspad</div>
+        <div class="product-price">77.55 €</div>
+        <button class="btn" onclick="addToCart('RGB Mauspad', 77.55)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Mechanische+" alt="Mechanische Tastatur" />
+      <div class="product-details">
+        <div class="product-title">Mechanische Tastatur</div>
+        <div class="product-price">142.83 €</div>
+        <button class="btn" onclick="addToCart('Mechanische Tastatur', 142.83)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gaming+Heads" alt="Gaming Headset" />
+      <div class="product-details">
+        <div class="product-title">Gaming Headset</div>
+        <div class="product-price">27.71 €</div>
+        <button class="btn" onclick="addToCart('Gaming Headset', 27.71)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Controller+P" alt="Controller PS4" />
+      <div class="product-details">
+        <div class="product-title">Controller PS4</div>
+        <div class="product-price">139.00 €</div>
+        <button class="btn" onclick="addToCart('Controller PS4', 139.00)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gaming+Stuhl" alt="Gaming Stuhl" />
+      <div class="product-details">
+        <div class="product-title">Gaming Stuhl</div>
+        <div class="product-price">138.18 €</div>
+        <button class="btn" onclick="addToCart('Gaming Stuhl', 138.18)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Cooling+Pad" alt="Cooling Pad" />
+      <div class="product-details">
+        <div class="product-title">Cooling Pad</div>
+        <div class="product-price">1.22 €</div>
+        <button class="btn" onclick="addToCart('Cooling Pad', 1.22)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Switch+Pro+C" alt="Switch Pro Controller" />
+      <div class="product-details">
+        <div class="product-title">Switch Pro Controller</div>
+        <div class="product-price">130.43 €</div>
+        <button class="btn" onclick="addToCart('Switch Pro Controller', 130.43)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Webcam+60fps" alt="Webcam 60fps" />
+      <div class="product-details">
+        <div class="product-title">Webcam 60fps</div>
+        <div class="product-price">124.89 €</div>
+        <button class="btn" onclick="addToCart('Webcam 60fps', 124.89)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Tischhalter+" alt="Tischhalter Monitor" />
+      <div class="product-details">
+        <div class="product-title">Tischhalter Monitor</div>
+        <div class="product-price">5.84 €</div>
+        <button class="btn" onclick="addToCart('Tischhalter Monitor', 5.84)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=RGB+LED+Stri" alt="RGB LED Strip" />
+      <div class="product-details">
+        <div class="product-title">RGB LED Strip</div>
+        <div class="product-price">9.10 €</div>
+        <button class="btn" onclick="addToCart('RGB LED Strip', 9.10)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Maus+Bungee" alt="Maus Bungee" />
+      <div class="product-details">
+        <div class="product-title">Maus Bungee</div>
+        <div class="product-price">53.71 €</div>
+        <button class="btn" onclick="addToCart('Maus Bungee', 53.71)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Headset-Stän" alt="Headset-Ständer" />
+      <div class="product-details">
+        <div class="product-title">Headset-Ständer</div>
+        <div class="product-price">9.43 €</div>
+        <button class="btn" onclick="addToCart('Headset-Ständer', 9.43)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gaming+Tisch" alt="Gaming Tischlampe" />
+      <div class="product-details">
+        <div class="product-title">Gaming Tischlampe</div>
+        <div class="product-price">39.38 €</div>
+        <button class="btn" onclick="addToCart('Gaming Tischlampe', 39.38)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Joystick+PC" alt="Joystick PC" />
+      <div class="product-details">
+        <div class="product-title">Joystick PC</div>
+        <div class="product-price">4.74 €</div>
+        <button class="btn" onclick="addToCart('Joystick PC', 4.74)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Stream+Deck" alt="Stream Deck" />
+      <div class="product-details">
+        <div class="product-title">Stream Deck</div>
+        <div class="product-price">119.75 €</div>
+        <button class="btn" onclick="addToCart('Stream Deck', 119.75)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=USB+Soundkar" alt="USB Soundkarte" />
+      <div class="product-details">
+        <div class="product-title">USB Soundkarte</div>
+        <div class="product-price">36.08 €</div>
+        <button class="btn" onclick="addToCart('USB Soundkarte', 36.08)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Capture+Card" alt="Capture Card" />
+      <div class="product-details">
+        <div class="product-title">Capture Card</div>
+        <div class="product-price">14.06 €</div>
+        <button class="btn" onclick="addToCart('Capture Card', 14.06)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gamepad+Mobi" alt="Gamepad Mobile" />
+      <div class="product-details">
+        <div class="product-title">Gamepad Mobile</div>
+        <div class="product-price">130.67 €</div>
+        <button class="btn" onclick="addToCart('Gamepad Mobile', 130.67)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Mini+Projekt" alt="Mini Projektor" />
+      <div class="product-details">
+        <div class="product-title">Mini Projektor</div>
+        <div class="product-price">77.45 €</div>
+        <button class="btn" onclick="addToCart('Mini Projektor', 77.45)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Wireless+Gam" alt="Wireless Gaming Pad" />
+      <div class="product-details">
+        <div class="product-title">Wireless Gaming Pad</div>
+        <div class="product-price">9.16 €</div>
+        <button class="btn" onclick="addToCart('Wireless Gaming Pad', 9.16)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=RGB+Keycaps" alt="RGB Keycaps" />
+      <div class="product-details">
+        <div class="product-title">RGB Keycaps</div>
+        <div class="product-price">5.91 €</div>
+        <button class="btn" onclick="addToCart('RGB Keycaps', 5.91)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Ergonomische" alt="Ergonomische Maus" />
+      <div class="product-details">
+        <div class="product-title">Ergonomische Maus</div>
+        <div class="product-price">141.43 €</div>
+        <button class="btn" onclick="addToCart('Ergonomische Maus', 141.43)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Streaming-Mi" alt="Streaming-Mikrofon" />
+      <div class="product-details">
+        <div class="product-title">Streaming-Mikrofon</div>
+        <div class="product-price">4.77 €</div>
+        <button class="btn" onclick="addToCart('Streaming-Mikrofon', 4.77)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Switch+Tasch" alt="Switch Tasche" />
+      <div class="product-details">
+        <div class="product-title">Switch Tasche</div>
+        <div class="product-price">64.42 €</div>
+        <button class="btn" onclick="addToCart('Switch Tasche', 64.42)">Jetzt kaufen</button>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Gaming" alt="Gaming Maus" />
+      <div class="product-details">
+        <div class="product-title">Gaming Maus</div>
+        <div class="product-price">49.99 €</div>
+        <button class="btn" onclick="addToCart('Gaming Maus', 49.99)">Jetzt kaufen</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=JBL" alt="JBL Box" />
+      <div class="product-details">
+        <div class="product-title">JBL Bluetooth Box</div>
+        <div class="product-price">89.99 €</div>
+        <button class="btn" onclick="addToCart('JBL Box', 89.99)">Jetzt kaufen</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Auto" alt="Handyhalterung" />
+      <div class="product-details">
+        <div class="product-title">Handyhalterung fürs Auto</div>
+        <div class="product-price">29.99 €</div>
+        <button class="btn" onclick="addToCart('Handyhalterung Auto', 29.99)">Jetzt kaufen</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/100?text=Powerbank" alt="Powerbank" />
+      <div class="product-details">
+        <div class="product-title">Powerbank 20000mAh</div>
+        <div class="product-price">39.99 €</div>
+        <button class="btn" onclick="addToCart('Powerbank', 39.99)">Jetzt kaufen</button>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h3>🧺 Warenkorb</h3>
+      <ul id="cart-items"></ul>
+      <p><strong>Gesamt:</strong> <span id="cart-total">0.00 €</span></p>
+      <a class="btn" href="checkout.html">➡️ Zur Kasse</a>
+    </div>
+  </div>
+
+  <footer>© 2025 FitGear – Alle Rechte vorbehalten</footer>
+
+  <script>
+    function addToCart(name, price) {
+      const li = document.createElement('li');
+      li.setAttribute("data-price", price.toFixed(2));
+      li.innerHTML = name + " – " + price.toFixed(2) + " € <button onclick='removeCartItem(this.parentElement)' style='margin-left:10px'>🗑️</button>";
+      document.getElementById("cart-items").appendChild(li);
+      updateTotal();
+    }
+
+    function removeCartItem(el) {
+      el.remove();
+      updateTotal();
+    }
+
+    function updateTotal() {
+      let total = 0;
+      document.querySelectorAll("#cart-items li").forEach(li => {
+        total += parseFloat(li.getAttribute("data-price"));
+      });
+      document.getElementById("cart-total").textContent = total.toFixed(2) + " €";
+      localStorage.setItem("cart-items", document.getElementById("cart-items").innerHTML);
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem("cart-items")) {
+        document.getElementById("cart-items").innerHTML = localStorage.getItem("cart-items");
+        updateTotal();
+      }
+    };
+  </script>
+</body>
+</html>
