@@ -1,1 +1,0 @@
-// script.js – Für Warenkorb, Filter, Modal-Ansicht etc.
